@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:constructor-arg="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:property-placeholder location="musicPlayer.properties"/>
+
+    <bean id="musicBeanClassical"
+          class="az.babayev.springcourse.ClassicalMusic">
+    </bean>
+
+    <bean id="musicBeanRock"
+          class="az.babayev.springcourse.RockMusic">
+    </bean>
+
+    <bean id="musicBeanJazz"
+          class="az.babayev.springcourse.JazzMusic">
+    </bean>
+
+<bean id="musicPlayer" class="az.babayev.springcourse.MusicPlayer" scope="prototype">
+<!--   aşağıdakı 1ci sətir setter metodudu -->
+    <property name="music" ref="musicBeanClassical"/>
+
+    <property name="name" value="${musicPlayer.name}"/>
+    <property name="volume" value="${musicPlayer.volume}"/>
+</bean>
+
+
+</beans>
