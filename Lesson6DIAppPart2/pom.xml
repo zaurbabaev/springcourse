@@ -2,10 +2,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>az.babayev.springcourse</groupId>
-    <artifactId>SpringIocApp1</artifactId>
+    <artifactId>DIAppPart2</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>SpringIocApp1 Maven Webapp</name>
+    <name>FirstDIApp Maven Webapp</name>
     <url>http://maven.apache.org</url>
     <dependencies>
 
@@ -33,6 +33,6 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>SpringIocApp1</finalName>
+        <finalName>DIAppPart2</finalName>
     </build>
 </project>
