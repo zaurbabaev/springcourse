@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:constructor-arg="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <bean id="musicBeanClassical"
+          class="az.babayev.springcourse.ClassicalMusic">
+    </bean>
+
+    <bean id="musicBeanRock"
+          class="az.babayev.springcourse.RockMusic">
+    </bean>
+
+    <bean id="musicBeanJazz"
+          class="az.babayev.springcourse.JazzMusic">
+    </bean>
+
+
+<!--    set metodu vasitəsilə Dİ-->
+
+<!--   <bean id="musicPlayer"-->
+<!--   class="az.babayev.springcourse.MusicPlayer">-->
+<!--       <property name="musicList">-->
+<!--           <list>-->
+<!--               <ref bean="musicBeanJazz"/>-->
+<!--               <ref bean="musicBeanClassical"/>-->
+<!--               <ref bean="musicBeanRock"/>-->
+<!--           </list>-->
+<!--       </property>-->
+<!--    </bean>-->
+
+
+<!--    Konstruktor vasitəsilə Dİ-->
+    <bean id="musicPlayer"
+    class="az.babayev.springcourse.MusicPlayer">
+        <constructor-arg name="musicList">
+            <list>
+                <ref bean="musicBeanRock"/>
+                <ref bean="musicBeanJazz"/>
+                <ref bean="musicBeanClassical"/>
+            </list>
+        </constructor-arg>
+    </bean>
+
+</beans>
