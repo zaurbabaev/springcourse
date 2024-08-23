@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+import java.util.Random;
+
 @Component
 public class MusicPlayer {
 
@@ -22,10 +24,12 @@ public class MusicPlayer {
     }
 
     public void playMusic(MusicEnum musicEnum) {
+        Random random = new Random();
+        int randomNumber = random.nextInt(3);
         switch (musicEnum) {
-            case CLASSICAL -> System.out.println(music1.getSong());
-            case JAZZ -> System.out.println(music2.getSong());
-            case ROCK -> System.out.println(music3.getSong());
+            case CLASSICAL -> System.out.println(music1.getSong().get(randomNumber));
+            case JAZZ -> System.out.println(music2.getSong().get(randomNumber));
+            default -> System.out.println(music3.getSong().get(randomNumber));
         }
     }
 
