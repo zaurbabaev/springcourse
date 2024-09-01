@@ -2,10 +2,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>az.babayev.springcourse</groupId>
-    <artifactId>SpringJdbcTemplate</artifactId>
+    <artifactId>SpringJdbcTemplate2</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>SpringJdbcTemplate</name>
+    <name>SpringJdbcTemplate2</name>
     <url>http://maven.apache.org</url>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -38,8 +38,6 @@
             <artifactId>spring-jdbc</artifactId>
             <version>${spring.version}</version>
         </dependency>
-
-
 
         <dependency>
             <groupId>org.springframework</groupId>
@@ -82,6 +80,6 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>SpringJdbcTemplate</finalName>
+        <finalName>SpringJdbcTemplate2</finalName>
     </build>
 </project>
