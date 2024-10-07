@@ -1,0 +1,22 @@
+create database first_db;
+
+create table public.person
+(
+    id      integer GENERATED ALWAYS AS identity ,
+    name    VARCHAR,
+    surname VARCHAR,
+    age     integer,
+    email   VARCHAR
+);
+
+INSERT INTO person(name, surname, age, email)
+VALUES ('Zaur','Babayev',37,'zaurik87@gmail.com'),
+('Vusal','Kerimov',30,'vusal@gmail.com'),
+('Nagi','Nagiyev',23,'nagi@gmail.com'),
+('Kamil','Eliyev',54,'kamil@gmail.com');
+
+SELECT * FROM  person;
+
+DROP table public.person;
+
+delete from person where id=5
