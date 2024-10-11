@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Konkret insan</title>
+</head>
+<body>
+
+<div>
+    <p th:text="${person.id}">Value</p>
+
+    <p th:text="${person.name}">Value</p>
+
+    <p th:text="${person.surname}">Value</p>
+
+    <p th:text="${person.age}">Value</p>
+
+    <p th:text="${person.email}">Value</p>
+
+    <p th:text="${person.address}">Value</p>
+
+    <a th:href="@{/people/edit/{id} (id=${person.id})}">Edit</a><br/><br/>
+
+    <form th:method="DELETE" th:action="@{/people/{id} (id=${person.id})}">
+        <input type="submit" th:value="DELETE">
+    </form>
+
+</div>
+</body>
+</html>
